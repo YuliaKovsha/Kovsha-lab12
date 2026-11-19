@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Git Commands</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .git-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        .git-table th, .git-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .git-table th { background-color: #f2f2f2; }
+        .git-code { background-color: #333; color: #fff; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        .section-title { background-color: #3b9ce6; color: white; padding: 10px; margin-top: 20px;}
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>Мій особистий блог</h1>
+        <span>Ковша Юлія Вікторівна</span>
+    </div>
+    <nav class="auth-links">
+        <a href="register.html">Реєстрація</a>
+    </nav>
+</header>
+
+<main style="display: block; max-width: 800px; margin: 0 auto; padding: 20px;">
+
+    <h2 class="section-title">Create a Repository</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>Create a new local repository</td><td><span class="git-code">git init</span></td></tr>
+        <tr><td>Download from an existing repository</td><td><span class="git-code">git clone my_url</span></td></tr>
+    </table>
+
+    <h2 class="section-title">Observe your Repository</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>List new or modified files not yet committed</td><td><span class="git-code">git status</span></td></tr>
+        <tr><td>Show the changes to files not yet staged</td><td><span class="git-code">git diff</span></td></tr>
+        <tr><td>Show the changes to staged files</td><td><span class="git-code">git diff --cached</span></td></tr>
+        <tr><td>Show all staged and unstaged file changes</td><td><span class="git-code">git diff HEAD</span></td></tr>
+        <tr><td>Show the changes between two commit ids</td><td><span class="git-code">git diff commit1 commit2</span></td></tr>
+        <tr><td>List the change dates and authors for a file</td><td><span class="git-code">git blame [file]</span></td></tr>
+        <tr><td>Show the file changes for a commit id and/or file</td><td><span class="git-code">git show [commit]:[file]</span></td></tr>
+        <tr><td>Show full change history</td><td><span class="git-code">git log</span></td></tr>
+        <tr><td>Show change history for file/directory including diffs</td><td><span class="git-code">git log -p [file/directory]</span></td></tr>
+    </table>
+
+    <h2 class="section-title">Working with Branches</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>List all local branches</td><td><span class="git-code">git branch</span></td></tr>
+        <tr><td>List all branches, local and remote</td><td><span class="git-code">git branch -av</span></td></tr>
+        <tr><td>Switch to a branch, my_branch</td><td><span class="git-code">git checkout my_branch</span></td></tr>
+        <tr><td>Create a new branch called new_branch</td><td><span class="git-code">git branch new_branch</span></td></tr>
+        <tr><td>Delete the branch called my_branch</td><td><span class="git-code">git branch -d my_branch</span></td></tr>
+        <tr><td>Merge branch_a into branch_b</td><td><span class="git-code">git checkout branch_b</span><br><span class="git-code">git merge branch_a</span></td></tr>
+        <tr><td>Tag the current commit</td><td><span class="git-code">git tag my_tag</span></td></tr>
+    </table>
+
+    <h2 class="section-title">Make a change</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>Stages the file, ready for commit</td><td><span class="git-code">git add [file]</span></td></tr>
+        <tr><td>Stage all changed files, ready for commit</td><td><span class="git-code">git add .</span></td></tr>
+        <tr><td>Commit all staged files to versioned history</td><td><span class="git-code">git commit -m "commit message"</span></td></tr>
+        <tr><td>Commit all your tracked files to versioned history</td><td><span class="git-code">git commit -am "commit message"</span></td></tr>
+        <tr><td>Unstages file, keeping the file changes</td><td><span class="git-code">git reset [file]</span></td></tr>
+        <tr><td>Revert everything to the last commit</td><td><span class="git-code">git reset --hard</span></td></tr>
+    </table>
+
+    <h2 class="section-title">Synchronize</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>Get the latest changes from origin</td><td><span class="git-code">git fetch</span></td></tr>
+        <tr><td>Fetch the latest changes from origin and merge</td><td><span class="git-code">git pull</span></td></tr>
+        <tr><td>Fetch the latest changes from origin and rebase</td><td><span class="git-code">git pull --rebase</span></td></tr>
+        <tr><td>Push local changes to the origin</td><td><span class="git-code">git push</span></td></tr>
+    </table>
+
+    <h2 class="section-title">Finally!</h2>
+    <table class="git-table">
+        <tr><th>Дія</th><th>Команда</th></tr>
+        <tr><td>When in doubt, use git help</td><td><span class="git-code">git command --help</span></td></tr>
+        <tr><td>Or visit https://training.github.com/</td><td>Official GitHub training</td></tr>
+    </table>
+
+</main>
+
+</body>
+</html>
