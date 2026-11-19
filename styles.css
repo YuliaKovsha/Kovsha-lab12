@@ -1,0 +1,154 @@
+/* =====================================================
+   Лабораторна робота №11 — Каскадні таблиці стилів
+   Студентка групи 304-ТН Ковша Ю. В.
+   ===================================================== */
+
+/* ===== Загальні налаштування сторінки ===== */
+BODY {
+    /* Фонове зображення сторінки */
+    background-image: url("images/bg.png");
+    background-repeat: repeat;
+    background-color: #F5F5F5;
+
+    /* Стиль тексту — курсив, довільний розмір */
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: #222;
+
+    /* Відстані ліворуч та праворуч до границь вікна */
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ===== Абзаци ===== */
+P {
+    /* Вирівнювання по ширині */
+    text-align: justify;
+
+    /* «Червоний рядок» */
+    text-indent: 2%;
+
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* ===== Заголовок 1-го рівня ===== */
+H1 {
+    font-weight: bold;          /* жирний */
+    text-align: center;         /* по центру */
+    color: #8B0000;             /* темно-червоний */
+    font-style: normal;         /* нормальний стиль (не курсив) */
+    font-size: 24pt;
+    margin: 20px 0;
+    text-indent: 0;
+}
+
+/* ===== Заголовок 2-го рівня (для структури) ===== */
+H2 {
+    color: #003366;
+    font-style: normal;
+    font-weight: bold;
+    text-indent: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ===== Рисунки ===== */
+IMG.left {
+    float: left;
+    margin: 0 15px 10px 0;
+    border: 2px solid #999;
+    max-width: 200px;
+}
+
+IMG.right {
+    float: right;
+    margin: 0 0 10px 15px;
+    border: 2px solid #999;
+    max-width: 200px;
+}
+
+IMG.center {
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #999;
+    max-width: 300px;
+}
+
+/* ===== Посилання ===== */
+
+/* не відвідане посилання */
+A:link {
+    color: green;
+    text-decoration: none;
+}
+
+/* активне посилання (натиснуте) */
+A:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+/* відвідане посилання */
+A:visited {
+    color: DarkBlue;
+    text-decoration: none;
+}
+
+/* посилання під курсором миші */
+A:hover {
+    color: Red;
+    text-decoration: underline;
+}
+
+/* ===== Навігаційне меню ===== */
+UL.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+    background-color: #003366;
+    border-bottom: 3px solid #FF9900;
+}
+
+UL.menu LI {
+    display: inline-block;
+}
+
+UL.menu LI A {
+    display: block;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+UL.menu LI A:link    { color: #FFFFFF; }
+UL.menu LI A:visited { color: #DDDDDD; }
+UL.menu LI A:hover   { color: #003366; background-color: #FF9900; }
+UL.menu LI A:active  { color: #FF0000; background-color: #FFFFFF; }
+
+/* ===== Підвал ===== */
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 10pt;
+    color: #777;
+    font-style: italic;
+    border-top: 1px solid #999;
+    clear: both;
+}
+
+/* ===== Блок контенту ===== */
+.content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* щоб float-рисунки не виходили за межі */
+}
